@@ -1,0 +1,319 @@
+/* Height 276px */
+footer {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    width: 100%;
+    background: url('../images/common/footer.jpg') no-repeat;
+    background-size: cover;
+    display: table !important;
+    min-height: 276px;
+    padding: 0px 85px !important;
+    @include mediaQuery($max, $mobile) {
+        padding: 0px 15px !important;
+    }
+    .footer-inner {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 50px 0px;
+        .scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            display: none;
+            z-index: 1;
+        }
+        .social-icons {
+            padding: 0px 15px;
+            @include mediaQuery($max, $mobile) {
+                padding: 0px 30px;
+            }
+            @media (min-width: 768px) and (max-width: 1199px) {
+                padding: 0px;
+                h3 {
+                    text-align: center;
+                }
+            }
+            .social-inner {
+                width: 241px;
+                margin: 0px auto;
+            }
+            ul {
+                padding-left: 0px;
+                list-style-type: none;
+                margin-bottom: 0px;
+                @media (min-width: 768px) and (max-width: 991px) {
+                    margin-bottom: 30px;
+                    padding-bottom: 15px;
+                }
+                @include mediaQuery($max, $mobile) {
+                    margin-bottom: 50px;
+                }
+                li {
+                    display: inline-block;
+                    a {
+                        i {
+                            background: $white;
+                            font-size: 25px;
+                            height: 46px;
+                            width: 46px;
+                            color: $burgundy;
+                            vertical-align: top;
+                            margin-right: 15px;
+                            &:hover {
+                                color: $white;
+                            }
+                        }
+                        &.facebook {
+                            i {
+                                padding: 10px 15.8px;
+                                &:hover {
+                                    background: $facebook;
+                                }
+                            }
+                        }
+                        &.twitter {
+                            i {
+                                padding: 12px 11.8px;
+                                &:hover {
+                                    background: $twitter;
+                                }
+                            }
+                        }
+                        &.linkedin {
+                            i {
+                                padding: 12px 11.8px;
+                                &:hover {
+                                    background: $linkedin;
+                                }
+                            }
+                        }
+                        &.youtube {
+                            i {
+                                padding: 11px 11.8px;
+                                margin-right: 0px;
+                                &:hover {
+                                    background: $youtube;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .organised_by {
+            padding: 0px 15px;
+            @media (min-width: 768px) and (max-width: 1199px) {
+                padding: 0px;
+                h3 {
+                    text-align: center;
+                    min-height: 100%;
+                }
+            }
+            @include mediaQuery($max, $tablet) {
+                text-align: center;
+            }
+            @include mediaQuery($max, $mobile) {
+                padding: 0px 30px;
+                margin-bottom: 50px;
+            }
+            .links-inner {
+                width: 241px;
+                margin: 0px auto;
+                @include mediaQuery($max, $mobile) {
+                    width: 100%;
+                    h3 {
+                        min-height: 100%;
+                    }
+                    a {
+                        padding-bottom: 0px;
+                        img {
+                            max-width: none;
+                            width: inherit;
+                        }
+                    }
+                }
+            }
+            a {
+                padding: 0px 0px 15px 0px;
+                display: inline-block;
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    margin-top: 45px;
+                    padding-bottom: 0px;
+                    display: block;
+                    img {
+                        margin: 0px auto;
+                    }
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    margin-bottom: 30px;
+                }
+                &:focus {
+                    outline: none !important;
+                }
+            }
+        }
+        .association {
+            padding: 0px 15px;
+            @media (min-width: 768px) and (max-width: 1199px) {
+                padding: 0px;
+                h3 {
+                    text-align: center;
+                    min-height: 100%;
+                }
+            }
+            @include mediaQuery($max, $tablet) {
+                text-align: center;
+            }
+            @include mediaQuery($max, $mobile) {
+                padding: 0px 30px;
+            }
+            .links-inner {
+                width: 241px;
+                margin: 0px auto;
+                @include mediaQuery($max, $mobile) {
+                    width: 100%;
+                    h3 {
+                        min-height: 100%;
+                    }
+                    a {
+                        img {
+                            max-width: none;
+                            width: inherit;
+                        }
+                    }
+                }
+            }
+            a {
+                padding: 0px 0px 15px 0px;
+                display: inline-block;
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    margin-top: 45px;
+                    display: block;
+                    padding-bottom: 0px;
+                    img {
+                        margin: 0px auto;
+                    }
+                }
+                @media (min-width: 768px) and (max-width: 991px) {
+                    margin-bottom: 0px;
+                }
+                @media (min-width: 768px) and (max-width: 1199px) {
+                    padding-bottom: 0px;
+                }
+                @include mediaQuery($max, $mobile) {
+                  padding: 0px;
+                }
+                &:focus {
+                    outline: none !important;
+                }
+            }
+        }
+        img {
+            &.store {
+                display: inline-block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        h3 {
+            color: $white;
+            margin: 0px 0px 20px 0px;
+            min-height: 56px;
+            font-size: 26px;
+            font-family: "DIN Light", Arial, sans-serif;
+            letter-spacing: 1px;
+            span {
+                display: block;
+            }
+            @include mediaQuery($max, $tablet) {
+                text-align: center;
+                span {
+                    display: inherit;
+                }
+            }
+        }
+    }
+}
+/* Height 84px */
+.copyright {
+    background: $burgundy;
+    float: left;
+    width: 100%;
+    padding: 32px 85px !important;
+    @include mediaQuery($max, $tablet) {
+        float: none;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        div {
+            padding: 0px;
+            margin: 0px auto;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    ul.nav {
+        @include mediaQuery($max, $mobile) {
+            margin: -7.5px 0px;
+        }
+        @include mediaQuery($max, $tablet) {
+            float: none;
+        }
+        li {
+            float: left;
+            text-align: center;
+            @include mediaQuery($max, $tablet) {
+                text-align: left;
+                float: none;
+                padding: 0px 15px;
+                margin: 0px auto;
+                width: 50%;
+            }
+            @include mediaQuery($max, $mobile) {
+                text-align: left;
+                float: none;
+                padding: 0px 15px;
+                margin: 0px auto;
+                width: 100%;
+            }
+            a {
+                &:first-child {
+                    padding-left: 0px;
+                }
+                padding: 0px 10px 0px 0px;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-family: "DIN Regular", Arial, sans-serif;
+                display: inline-block;
+                &:hover, &:focus {
+                    background: transparent;
+                }
+                @include mediaQuery($max, $tablet) {
+                    text-align: center;
+                    width: 49%;
+                    padding-bottom: 15px;
+                }
+                @include mediaQuery($max, $mobile) {
+                    text-align: center;
+                    width: 49%;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+    p {
+        margin-bottom: 0px;
+        color: $white;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        @media (min-width: 1560px) {
+            text-align: right;
+        }
+        @include mediaQuery($max, $mobile) {
+            text-align: center;
+            padding: 20px 15px 0px 15px;
+        }
+    }
+}

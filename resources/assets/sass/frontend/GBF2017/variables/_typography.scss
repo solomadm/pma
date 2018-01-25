@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'DIN Bold';
+    src: url('../fonts/DIN-Bold/DIN-Bold.eot');
+    src: url('../fonts/DIN-Bold/DIN-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DIN-Bold/DIN-Bold.woff') format('woff'),
+    url('../fonts/DIN-Bold/DIN-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Medium';
+    src: url('../fonts/DIN-Medium/DIN-Medium.eot');
+    src: url('../fonts/DIN-Medium/DIN-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DIN-Medium/DIN-Medium.woff') format('woff'),
+    url('../fonts/DIN-Medium/DIN-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Light';
+    src: url('../fonts/DIN-Light/DIN-Light.eot');
+    src: url('../fonts/DIN-Light/DIN-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DIN-Light/DIN-Light.woff') format('woff'),
+    url('../fonts/DIN-Light/DIN-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN Regular';
+    src: url('../fonts/DIN-Regular/DIN-Regular.eot');
+    src: url('../fonts/DIN-Regular/DIN-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DIN-Regular/DIN-Regular.woff') format('woff'),
+    url('../fonts/DIN-Regular/DIN-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: "DIN Regular", Arial, sans-serif;
+    font-size: 15px;
+}

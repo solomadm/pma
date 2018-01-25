@@ -1,0 +1,22 @@
+/* IE 9 Only */
+@media screen and (min-width:0\0) and (min-resolution: .001dpcm) {
+    .mobile-first .menu.active,
+    body.home .gbf-africa-section .chart-circle .chart {
+        display: none;
+    }
+    body.home .gbf-africa-section .chart-circle img.ie-gbf {
+        display: block;
+        margin-top: 30%;
+    }
+}
+
+/* IE 10 Only */
+html[data-useragent*='MSIE 10.0'] .mobile-first .menu.active,
+html[data-useragent*='MSIE 10.0'] body.home .gbf-africa-section .chart-circle .chart {
+    display: none;
+}
+
+html[data-useragent*='MSIE 10.0'] body.home .gbf-africa-section .chart-circle img.ie-gbf {
+    display: block;
+    margin-top: 30%;
+}

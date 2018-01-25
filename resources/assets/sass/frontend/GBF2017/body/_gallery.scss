@@ -1,0 +1,143 @@
+html {
+    body.gallery {
+        .hero-image {
+            background: url('../images/common/form-banner.jpg') no-repeat top;
+            background-size: 100% auto;
+            width: 100%;
+            height: 100%;
+            @include mediaQuery($max, $mobile) {
+                background-size: cover;
+                height: 450px;
+            }
+            @include mediaQuery($min, $min-tablet) {
+                background: none;
+                height: auto;
+            }
+            img.hero-image {
+                max-width: 100%;
+            }
+        }
+        .gallery-section {
+            button {
+                &:before {
+                    font-size: 50px;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    font-family: FontAwesome;
+                    top: -10px;
+                    background: $white;
+                }
+                &.slick-disabled {
+                    &:before {
+                        opacity: 1;
+                        color: $very-light-grey !important;
+                    }
+                }
+                &.slick-prev {
+                    &:before {
+                        content: "\f104";
+                        left: -21px;
+                        color: $green;
+                    }
+                }
+                &.slick-next {
+                    &:before {
+                        content: "\f105";
+                        left: 5px;
+                        color: $green;
+                    }
+                }
+            }
+            .slick-slide {
+                margin-bottom: 25px;
+                &:focus {
+                    outline: none;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    max-width: 1024px;
+                    margin: 0px auto;
+                }
+            }
+        }
+        .slider-nav {
+            button {
+                &:before {
+                    font-size: 50px;
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    font-family: FontAwesome;
+                    top: -10px;
+                    background: $white;
+                }
+                &.slick-disabled {
+                    &:before {
+                        opacity: 1;
+                        color: $very-light-grey !important;
+                    }
+                }
+                &.slick-prev {
+                    &:before {
+                        content: "\f104";
+                        left: -21px;
+                        color: $green;
+                    }
+                }
+                &.slick-next {
+                    &:before {
+                        content: "\f105";
+                        left: 5px;
+                        color: $green;
+                    }
+                }
+            }
+            .slick-list {
+                .slick-track {
+                    .slick-slide {
+                        padding: 0px 14px;
+                        &:focus {
+                            outline: none;
+                        }
+                        img {
+                            filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+                            filter: gray;
+                            -webkit-filter: grayscale(1);
+                            -moz-filter: grayscale(100%);
+                            -ms-filter: grayscale(100%);
+                            -ms-filter: grayscale(100%);
+                            -o-filter: grayscale(100%);
+                            filter: grayscale(100%);
+                            @include transition(.5s, ease-in-out);
+                            cursor: pointer;
+                            &:hover {
+                                filter: none;
+                                -webkit-filter: grayscale(0);
+                                -moz-filter: grayscale(0);
+                                -ms-filter: grayscale(0);
+                                -ms-filter: grayscale(0);
+                                -o-filter: grayscale(0);
+                                @include transition(.5s, ease-in-out);
+                            }
+                        }
+                        &.slick-current {
+                            img {
+                                filter: none;
+                                -webkit-filter: grayscale(0);
+                                -moz-filter: grayscale(0);
+                                -ms-filter: grayscale(0);
+                                -ms-filter: grayscale(0);
+                                -o-filter: grayscale(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

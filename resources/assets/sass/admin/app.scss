@@ -1,0 +1,118 @@
+//Conference switcher select2 instance customisations
+
+.conference-table tr {
+  cursor:pointer;
+}
+
+.btn-container {
+  margin:5px 20px 20px 15px;
+}
+
+.select2-selection__rendered {
+  text-transform: capitalize;
+}
+
+.media-container {
+  margin:20px;
+  padding:10px;
+}
+
+.media-preview {
+  overflow: hidden;
+  padding:  .25rem;
+
+  .hover-visible {
+    display:none;
+  }
+
+  img {
+    height:140px;
+    background: #d0d0d0;
+  }
+
+  &:hover {
+    .hover-visible {
+      display:block;
+    }
+  }
+}
+
+.image-selector {
+  height: 120px !important;
+}
+
+.disabled {
+  opacity:0.4;
+}
+
+.ui-timepicker-wrapper {
+  width:13.5em;
+}
+
+.auto-form-input {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  padding-right: 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-top-color: rgb(204, 204, 204);
+  border-right-color: rgb(204, 204, 204);
+  border-bottom-color: rgb(204, 204, 204);
+  border-left-color: rgb(204, 204, 204);
+  border-radius: 0px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+
+.autocomplete ul {
+  &::before {
+    border:none;
+  }
+  z-index:999;
+  margin:0;
+  padding-top:0;
+  display: initial;
+  width:100%;
+  border: 1px solid #ddd;
+  li {
+    a {
+      b {
+        display: none;
+      }
+    }
+  }
+}
+
+.select2-selection__rendered {
+  span {
+    img {
+      background: #d0d0d0;
+    }
+  }
+}
+
+.select2-container--default .select2-selection--single.image-selector, .image-selector .select2-selection .select2-selection--single.image-selector {
+  padding: 4px 0;
+}
+
+.table-hover > tbody > tr {
+  transition: background-color 0.25s, color 0.25s;
+  font-size: 16px;
+  color: #4c4c4c;
+  &:hover {
+    background-color: #aeaeae;
+    transition: background-color 0s, color 0s;
+    cursor: pointer;
+    color: #252525;
+  }
+  td {
+    border: none;
+  }
+}

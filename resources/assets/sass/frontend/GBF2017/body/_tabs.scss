@@ -1,0 +1,1224 @@
+body.tabs {
+    .hero-image {
+        background: url('../images/common/form-banner.jpg') no-repeat top;
+        background-size: 100% auto;
+        width: 100%;
+        height: 100%;
+        @include mediaQuery($max, $mobile) {
+            background-size: cover;
+            height: 450px;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            min-height: 255px;
+        }
+        @include mediaQuery($min, $min-small-desktop) {
+            background: none;
+            height: auto;
+        }
+        img.hero-image {
+            max-width: 100%;
+        }
+    }
+    .accordion {
+        &.faq {
+            h2 {
+                display: inline-block;
+            }
+        }
+        h2 {
+            text-transform: uppercase;
+            color: $dark-grey;
+            font-family: "DIN Medium", Arial, sans-serif;
+            font-size: 30px;
+            margin: 0px;
+        }
+        .expandAll, .expandAll1, .expandAll2, .expandAll3, .expandAll4 {
+            text-transform: uppercase;
+            color: $dark-grey;
+            float: right;
+            position: relative;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: "DIN Regular", Arial, sans-serif;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .expandAll {
+            top: 10px;
+            @include mediaQuery($max, $mobile) {
+                top: 0px;
+                float: right;
+            }
+        }
+        .expandAll1, .expandAll2, .expandAll3, .expandAll4 {
+            top: -25px;
+            @include mediaQuery($max, $mobile) {
+                top: 0px;
+                float: left;
+            }
+        }
+        .panel-group {
+            margin-bottom: 75px;
+            @include mediaQuery($max, $mobile) {
+                margin-bottom: 45px;
+            }
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            .panel.panel-default {
+                border-radius: 0px;
+                border: none;
+                margin: 0px 0px 40px 0px;
+                display: inline-block;
+                width: 100%;
+                &:first-child {
+                    margin-top: 25px;
+                }
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+                .panel-heading {
+                    background: $green;
+                    border: none;
+                    color: $white;
+                    padding: 0px;
+                    border-radius: 0px;
+                    &.unclickable-link {
+                        border: 1px solid $green;
+                        background: $white;
+                        color: $green;
+                    }
+                    h4.panel-title {
+                        a {
+                            font-size: 20px;
+                            font-family: "DIN Regular", Arial, sans-serif;
+                            padding: 15px 15px 15px 80px;
+                            @include mediaQuery($max, $mobile) {
+                                padding: 15px 15px 15px 15px;
+                                font-size: 18px;
+                            }
+                            display: block;
+                            text-transform: uppercase;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                            &:focus {
+                                outline: none;
+                                text-decoration: none;
+                            }
+                            span {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+                .accordion-body {
+                    .panel-body {
+                        padding: 40px 80px;
+                        font-family: "DIN Regular",Arial,sans-serif;
+                        font-size: 20px;
+                        @include mediaQuery($max, $mobile) {
+                            padding: 40px 20px;
+                        }
+                        a {
+                            color: $green;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .tabs-copy {
+        &.dashboard {
+            h2 {
+                span {
+                    padding-left: 15px;
+                    @include mediaQuery($max, $mobile) {
+                        padding-left: 5px;
+                    }
+                    img {
+                        vertical-align: baseline;
+                    }
+                }
+            }
+            .update-form {
+                h3 {
+                    text-transform: uppercase;
+                    margin-top: 0px;
+                    font-family: "DIN Bold", Arial, sans-serif;
+                    font-size: 20px;
+                }
+                p {
+                    sup {
+                        color: $green;
+                    }
+                }
+                form {
+                    .form-group {
+                        @include mediaQuery($max, $mobile) {
+                            width: 90%;
+                        }
+                        &.visa {
+                            padding-top: 40px;
+                        }
+                        &.bio {
+                            label {
+                                font-family: "DIN Regular", Arial, sans-serif;
+                                text-transform: uppercase;
+                                padding-right: 0px;
+                                padding-bottom: 15px;
+                            }
+                        }
+                        .control-panel {
+                            &.vertical-empty {
+                                height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+            .panel-group {
+                .panel.panel-default {
+                    .panel-heading {
+                        h4.panel-title {
+                            a {
+                                padding: 15px 15px 15px 40px;
+                            }
+                        }
+                    }
+                    .panel-body {
+                        border-left: 1px solid $mid-grey;
+                        border-right: 1px solid $mid-grey;
+                        padding: 0px;
+                        a.dashboard-action {
+                            display: block;
+                            text-align: right;
+                            color: $darker-grey;
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            line-height: 16px;
+                            cursor: pointer;
+                            font-family: "DIN Light", Arial, sans-serif;
+                            @media (min-width: 992px) and (max-width: 1099px) {
+                                font-size: 12px;
+                                line-height: 12px;
+                            }
+                            @media (min-width: 1100px) and (max-width: 1199px) {
+                                font-size: 14px;
+                                line-height: 14px;
+                            }
+                            &:hover {
+                                text-decoration: none;
+                            }
+                            span {
+                                padding-left: 5px;
+                            }
+                        }
+                        .two-column-accordion {
+                            display: flow-root;
+                            padding: 30px 40px 25px 40px;
+                            border-bottom: 1px solid $mid-grey;
+                            @media (min-width: 768px) and (max-width: 991px) {
+                                padding: 30px 25px 25px 25px;
+                            }
+                            @media (min-width: 992px) and (max-width: 1099px) {
+                                padding: 15px 10px 10px 10px;
+                            }
+                            @media (min-width: 1100px) and (max-width: 1199px) {
+                                padding: 20px 15px 15px 15px;
+                            }
+                            @media (min-width: 1200px) and (max-width: 1249px) {
+                                padding-left: 25px;
+                                padding-right: 25px;
+                            }
+                            @media (min-width: 1250px) {
+                                padding-right: 48px;
+                            }
+                            .left-container-details {
+                                display: inline-block;
+                                @include mediaQuery($max, $mobile) {
+                                    display: block;
+                                }
+                                .left-image {
+                                    padding-left: 0px;
+                                    width: 64px;
+                                    height: 64px;
+                                    display: inline-block;
+                                    @include mediaQuery($max, $mobile) {
+                                        display: block;
+                                        margin: 0px auto;
+                                    }
+                                }
+                                .right-details {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    padding: 8px 0px 8px 15px;
+                                    @include mediaQuery($max, $mobile) {
+                                        display: block;
+                                        padding: 20px 0px 20px 0px;
+                                    }
+                                    @media (min-width: 992px) and (max-width: 1199px) {
+                                        padding: 8px 0 8px 5px;
+                                    }
+                                    p {
+                                        margin-bottom: 0px;
+                                        @media (min-width: 1100px) and (max-width: 1199px) {
+                                            font-size: 15px;
+                                        }
+                                        @media (min-width: 992px) and (max-width: 1099px) {
+                                            font-size: 12px;
+                                        }
+                                        @include mediaQuery($max, $mobile) {
+                                            text-align: center !important;
+                                        }
+                                        span {
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                }
+                            }
+                            .request-action {
+                                display: inline-block;
+                                float: right;
+                                padding-top: 1%;
+                                @media (min-width: 1200px) and (max-width: 1439px) {
+                                    padding-top: 2%;
+                                }
+                                @media (min-width: 992px) and (max-width: 1199px) {
+                                    padding-top: 3%;
+                                    a.dashboard-action {
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                                @media (min-width: 768px) and (max-width: 991px) {
+                                    padding-top: 2%;
+                                    a.dashboard-action {
+                                        margin-bottom: 10px;
+                                    }
+                                }
+                                @include mediaQuery($max, $mobile) {
+                                    display: block;
+                                    float: none;
+                                    width: 100px;
+                                    margin: 0px auto;
+                                }
+                                a.dashboard-action {
+                                    &:first-child {
+                                        margin-bottom: 15px;
+                                    }
+                                    &:last-child {
+                                        margin-bottom: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        .three-column-accordion {
+                            display: flow-root;
+                            div {
+                                border-bottom: 1px solid $mid-grey;
+                                padding: 12.5px 40px;
+                                &:first-child {
+                                    p {
+                                        text-transform: uppercase;
+                                        a {
+                                            &:hover {
+                                                text-decoration: none;
+                                            }
+                                            &:focus {
+                                                outline: none;
+                                            }
+                                        }
+                                    }
+                                }
+                                &:nth-last-child(1) {
+                                    p {
+                                        padding-left: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            a.btn-default {
+                height: 50px;
+                width: 237px;
+                font-size: 18px;
+                line-height: 18px;
+                &.active {
+                    background: $white;
+                    color: $green;
+                    box-shadow: none;
+                    border-color: $green;
+                }
+            }
+            h2 {
+                font-size: 23px;
+            }
+            .modal {
+                z-index: 10000;
+                &#logout {
+                    .modal-dialog {
+                        top: 50%;
+                        margin-top: -118.5px;
+                        .modal-body {
+                            padding: 45px 12px;
+                        }
+                    }
+                }
+                &#update-photo {
+                    .modal-dialog {
+                        top: 50%;
+                        margin-top: -161px;
+                        .modal-body {
+                            padding: 45px 12px;
+                            small {
+                                font-size: 95%;
+                                margin-bottom: 25px;
+                                display: block;
+                                sup {
+                                    color: $green;
+                                }
+                            }
+                            p {
+                                padding-bottom: 25px;
+                                text-align: left;
+                                span {
+                                    display: inline-block;
+                                }
+                                sup {
+                                    color: $green;
+                                    display: inline-block;
+                                }
+                            }
+                            .fileinput.input-group {
+                                .btn-file {
+                                    border-radius: 0px;
+                                    border: 2px solid $green;
+                                    background: $white;
+                                    padding: 6px 25px;
+                                    font-size: 19px;
+                                    line-height: 19px;
+                                    span {
+                                        color: $green;
+                                        text-transform: uppercase;
+                                    }
+                                    input {
+                                        color: $green;
+                                    }
+                                }
+                                .form-control {
+                                    border-radius: 0px;
+                                    height: 50px;
+                                }
+                            }
+                            .uploading-button {
+                                @include mediaQuery($max, $mobile) {
+                                    width: 186px;
+                                    margin: 0px auto;
+                                }
+                            }
+                            .btn.btn-default.upload-photo {
+                                width: 125px;
+                                margin-left: 15px;
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                }
+                .modal-content {
+                    box-shadow: none;
+                    background: transparent;
+                    border: none;
+                    .modal-header {
+                        background: $green;
+                        border-top-left-radius: 12px;
+                        border-top-right-radius: 12px;
+                        padding: 8px 15px 8px 50px;
+                        h4 {
+                            font-family: "DIN Light", Arial, sans-serif;
+                            color: $white;
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            letter-spacing: 1px;
+                        }
+                        .close {
+                            margin-top: 0px;
+                            color: #FFF;
+                            opacity: 1;
+                            font-size: 25px;
+                            font-weight: 100;
+                            line-height: 16px;
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                    .modal-body {
+                        background: $white;
+                        border-bottom-left-radius: 12px;
+                        border-bottom-right-radius: 12px;
+                        display: inline-block;
+                        width: 100%;
+                        padding: 45px !important;
+                        p {
+                            font-size: 20px;
+                        }
+                        .request-action {
+                            a.btn.btn-default {
+                                font-family: "DIN Regular", Arial, sans-serif;
+                                margin-right: 20px;
+                                margin-top: 20px;
+                                width: 120px;
+                            }
+                            a.btn.btn-default + a.btn.btn-default {
+                                margin-right: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+            .dashboard-left {
+                h2 {
+                    margin: 40px 0px 10px 0px;
+                    color: $green;
+                    font-family: "DIN Bold", Arial, sans-serif;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    @include mediaQuery($max, $mobile) {
+                        text-align: center;
+                    }
+                }
+                h3 {
+                    text-align: left;
+                    margin-top: 0px;
+                    margin-left: -3px;
+                    font-family: "DIN Light", Arial, sans-serif;
+                    font-size: 40px;
+                    line-height: 40px;
+                    color: $dark-grey;
+                    text-transform: uppercase;
+                    @include mediaQuery($max, $mobile) {
+                        text-align: center;
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+                p {
+                    text-align: left !important;
+                    padding-bottom: 0px !important;
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    &:first-child {
+                        margin-bottom: 0px;
+                    }
+                    &:last-child {
+                        margin-bottom: 40px;
+                    }
+                    span {
+                        font-family: "DIN Bold", Arial, sans-serif;
+                    }
+                    a {
+                        color: $green;
+                        text-decoration: underline;
+                    }
+                }
+                .buttons {
+                    @include mediaQuery($max, $tablet) {
+                        padding: 0px 0px 30px 0px;
+                    }
+                    @include mediaQuery($max, $mobile) {
+                        text-align: center;
+                    }
+                    .update-photo {
+                        &:hover {
+                            background: $white !important;
+                            color: $green !important;
+                        }
+                        &.active {
+                            background: $white !important;
+                            color: $green !important;
+                        }
+                    }
+                }
+                img {
+                    @include mediaQuery($max, $tablet) {
+                        width: 275px;
+                    }
+                    @include mediaQuery($max, $mobile) {
+                        margin: 0px auto;
+                    }
+                }
+            }
+            .dashboard-right {
+                padding-left: 45px;
+                @include mediaQuery($max, $tablet) {
+                    padding-left: 15px;
+                }
+                p {
+                    text-align: left !important;
+                    padding-bottom: 0px !important;
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    &:first-child {
+                        margin-bottom: 0px;
+                    }
+                    span {
+                        font-family: "DIN Bold", Arial, sans-serif;
+                    }
+                    a {
+                        color: $green;
+                        text-decoration: underline;
+                    }
+                }
+                .side-by-side-link {
+                    position: relative;
+                    a {
+                        position: absolute;
+                        display: block;
+                        right: 15px;
+                        top: -26px;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        font-family: "DIN Regular", Arial, sans-serif;
+                        color: $dark-grey;
+                        @include mediaQuery($max, $mobile) {
+                            right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        &.programme {
+            .date {
+                padding: 15px;
+                span {
+                    font-family: "DIN Medium", Arial, sans-serif;
+                    font-size: 18px;
+                }
+            }
+            h2 {
+                text-transform: capitalize;
+                font-size: 25px;
+                font-family: "DIN Regular", Arial, sans-serif;
+                margin-bottom: 15px;
+                &.tab-header-text {
+                    display: inline-block;
+                }
+                &.day-2 {
+                    margin-top: 60px;
+                    margin-bottom: 37px;
+                }
+                span {
+                    &.day {
+                        color: $green;
+                    }
+                }
+            }
+            img.tab-header-icon {
+                display: inline-block;
+                margin: 0px 15px 15px 0px;
+            }
+            ul.nav.nav-tabs {
+                li {
+                    a {
+                        min-width: 270px;
+                        @media (min-width: 768px) and (max-width: 1199px) {
+                            min-width: 155px;
+                            padding: 12px 35px;
+                        }
+                    }
+                }
+            }
+            .panel-group {
+                .panel.panel-default {
+                    margin: 0px 0px 40px 0px;
+                    @include mediaQuery($max, $mobile) {
+                        margin-bottom: 20px;
+                    }
+                    .panel-body {
+                        p {
+                            font-size: 18px;
+                            text-align: left;
+                            padding-bottom: 0px;
+                            span {
+                                color: $green;
+                                display: inline-block;
+                            }
+                        }
+                        h4 {
+                            text-decoration: underline;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        #programme-tab {
+            p {
+                &.no-results {
+                    font-size: 20px;
+                    margin-bottom: 100px;
+                }
+            }
+            .panel-default {
+                .panel-body {
+                    .content-block {
+                        h4 {
+                            text-decoration: underline;
+                            font-size: 14px;
+                            font-family: "DIN Regular", Arial, sans-serif;
+                        }
+                        p {
+                            &.expanded-tab {
+                                //                                display: none;
+                            }
+                            padding-bottom: 0px;
+                            text-align: left;
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                        .expanded-tab {
+                            padding-bottom: 0px;
+                            h4 {
+                                margin-top: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #speakers-tab, #delegates-tab {
+            .tab-content {
+                .tab-pane {
+                    p {
+                        padding: 30px 0px 70px 0px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        &.knowledge-hub {
+            #knowlede-hub-tab {
+                ul.nav.nav-tabs {
+                    li {
+                        a {
+                            min-width: 300px;
+                        }
+                    }
+                }
+            }
+            .panel.panel-default {
+                .panel-body {
+                    min-height: 175px;
+                    h3 {
+                        padding-left: 30px;
+                    }
+                    p {
+                        padding-left: 0px;
+                    }
+                }
+            }
+        }
+        ul.nav.nav-tabs {
+            border: none;
+            text-align: center;
+            @include mediaQuery($max, $mobile) {
+                padding-right: 0px;
+            }
+            li {
+                margin-bottom: -2px;
+                float: none;
+                display: inline-block;
+                &.active {
+                    a {
+                        color: $green;
+                        background: $light-grey;
+                        border: 1px solid $light-grey;
+                        &:hover {
+                            background: $light-grey;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                &.close-button {
+                    vertical-align: top;
+                    margin: 0px;
+                    height: 83px;
+                    @media (min-width: 768px) and (max-width: 1199px) {
+                        height: 63px;
+                    }
+                    button.close {
+                        opacity: 1;
+                        color: $mid-grey;
+                        font-weight: 100;
+                        text-shadow: none;
+                        padding: 23px 0px 23px 25px;
+                        @media (min-width: 768px) and (max-width: 1199px) {
+                            padding: 13px 0px 13px 25px;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                a {
+                    color: $dark-grey;
+                    text-transform: uppercase;
+                    background: transparent;
+                    border-radius: 0px;
+                    font-family: "DIN Light", Arial, sans-serif;
+                    font-size: 40px;
+                    margin-bottom: 2px;
+                    padding: 12px 45px;
+                    border: 1px solid $white;
+                    min-width: 490.8px;
+                    @include mediaQuery($max, $mobile) {
+                        min-width: 100%;
+                    }
+                    span {
+                        text-transform: lowercase;
+                    }
+                    &:hover {
+                        background: $white;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                    @media (min-width: 768px) and (max-width: 1199px) {
+                        min-width: 230px;
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background: $light-grey;
+            display: inline-block;
+            width: 100%;
+            @include mediaQuery($min, $min-large-desktop) {
+                padding-left: 200px !important;
+                padding-right: 200px !important;
+            }
+            .tab-pane {
+                p {
+                    text-align: center;
+                    padding-bottom: 40px;
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .custom-tabs {
+        .anchor {
+            display: block;
+            position: absolute;
+            top: -150px;
+        }
+        .list-name {
+            margin-bottom: 25px;
+        }
+        span.bold {
+            font-family: "DIN Bold", Arial, sans-serif;
+        }
+        span.bold + span {
+            display: block;
+        }
+        &.sponsors-partners {
+            h2 {
+                margin-top: 40px;
+                text-transform: uppercase;
+                font-size: 40px;
+                font-family: "DIN Light", Arial, sans-serif;
+                color: $dark-grey;
+            }
+            .panel {
+                display: inline-block;
+                .panel-body {
+                    p {
+                        padding-bottom: 0px;
+                        text-align: left;
+                    }
+                    a.url-link {
+                        color: $green;
+                        font-family: "DIN Regular", Arial, sans-serif;
+                        margin-bottom: 10px;
+                        display: block;
+                    }
+                }
+            }
+        }
+        .panel {
+            box-shadow: none;
+            border-radius: 0px;
+            border: none;
+            margin-bottom: 40px;
+            position: relative;
+            .panel-body {
+                padding: 0px;
+                #map {
+                    display: block;
+                    height: 350px;
+                    margin: 0 auto;
+                    .gm-style {
+                        h2 {
+                            font-family: "DIN Light",Arial,sans-serif;
+                            font-size: 20px;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            font-family: "DIN Regular",Arial,sans-serif;
+                            font-size: 17px;
+                            text-transform: capitalize;
+                        }
+                        .gm-style-iw {
+                            div {
+                                div {
+                                    overflow-x: hidden !important;
+                                }
+                            }
+                            img {
+                                max-width: 100% !important;
+                            }
+                        }
+                    }
+                }
+                &.travel {
+                    padding: 50px;
+                }
+                .image-block {
+                    padding: 0px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .content-block {
+                    padding: 50px 50px 75px 50px;
+                    @include mediaQuery($max, $mobile) {
+                        padding: 25px 25px 75px 25px;
+                    }
+                    ul {
+                        padding-left: 19px;
+                        li {
+                            font-size: 17px;
+                            font-family: "DIN Regular",Arial,sans-serif;
+                        }
+                        li + .empty-space {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    .expanded-tab {
+                        //                        padding-bottom: 35px;
+                    }
+                }
+                a.btn.btn-default {
+                    width: 320px !important;
+                    font-family: "DIN Regular",Arial,sans-serif;
+                    position: absolute;
+                    right: 0px;
+                    bottom: 0px;
+                    padding: 12px 12px;
+                    @include mediaQuery($max, $tablet) {
+                        width: 100% !important;
+                    }
+                    span {
+                        padding-left: 10px;
+                    }
+                }
+                .another-block {
+                    .expanded-tab {
+                        padding: 50px 50px 100px 50px;
+                        @include mediaQuery($max, $mobile) {
+                            padding: 25px 25px 100px 25px;
+                        }
+                        &.collapse.in {
+                            display: inline-block;
+                        }
+                    }
+                    h3 {
+                        font-size: 22px;
+                        font-family: "DIN Medium", Arial, sans-serif;
+                        margin-bottom: 15px;
+                    }
+                    h4 {
+                        width: 100%;
+                        font-size: 18px;
+                        color: $dark-grey;
+                    }
+                    hr {
+                        margin: -10px 0px 20px 0px;
+                        border-top: 1px solid $dark-grey;
+                    }
+                    ul {
+                        padding-left: 0px;
+                        list-style-type: none;
+                        &.ceo {
+                            li {
+                                margin: 0px;
+                            }
+                        }
+                        li {
+                            font-family: "DIN Regular", Arial, sans-serif;
+                            font-size: 18px;
+                            margin: 15px 0px;
+                            span {
+                                display: block;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .content-block+div {
+                    a.btn.btn-default.pull-right {
+                        width: 210px !important;
+                        span {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+                h3 {
+                    text-transform: uppercase;
+                    font-family: "DIN Regular", Arial, sans-serif;
+                    font-size: 30px;
+                    color: $dark-grey;
+                    margin-top: 0px;
+                }
+                p {
+                    font-size: 17px;
+                    font-family: "DIN Regular", Arial, sans-serif;
+                    color: $dark-grey;
+                    &.contact {
+                        margin-bottom: 0px;
+                    }
+                    span {
+                        text-transform: capitalize;
+                        color: $green;
+                        font-family: "DIN Medium", Arial, sans-serif;
+                    }
+                    a {
+                        text-decoration: underline;
+                        font-family: "DIN Regular", Arial, sans-serif;
+                        color: $dark-grey;
+                    }
+                }
+                p.contact+p.contact {
+                    margin-bottom: 25px;
+                }
+                .countries-list {
+                    margin: 25px 0px;
+                    ul {
+                        padding-left: 0px;
+                        list-style-type: none;
+                        li {
+                            font-family: "DIN Regular", Arial, sans-serif;
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .media-block {
+        padding-bottom: 40px;
+        &:last-child {
+            padding-bottom: 0px;
+        }
+        &.gallery-block {
+            .panel-default {
+                .panel-footer {
+                    p {
+                        position: relative;
+                        top: -20px;
+                    }
+                }
+            }
+        }
+        a {
+            color: $dark-grey;
+            &:hover {
+                text-decoration: none;
+                .panel.panel-default {
+                    .panel-heading {
+                        img {
+                            -webkit-transform: scale3d(1.2, 1.2, 1);
+                            transform: scale3d(1.2, 1.2, 1);
+                        }
+                    }
+                    .panel-footer {
+                        p {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            &:focus {
+                text-decoration: none;
+            }
+            .panel.panel-default {
+                border-radius: 0px;
+                border: none;
+                margin-bottom: 0px;
+                .panel-heading {
+                    border-radius: 0px;
+                    padding: 0px;
+                    border: none;
+                    overflow: hidden;
+                    &:hover {
+                        img {
+                            -webkit-transform: scale3d(1.2, 1.2, 1);
+                            transform: scale3d(1.2, 1.2, 1);
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        -webkit-transition: all 0.5s linear;
+                        transition: all 0.5s linear;
+                        -webkit-transform: scale3d(1, 1, 1);
+                        transform: scale3d(1, 1, 1);
+                    }
+                }
+                .panel-body {
+                    padding: 30px 30px 0px 30px;
+                    h3 {
+                        text-align: left;
+                        text-transform: uppercase;
+                        color: $dark-grey;
+                        margin: 0px 0px 10px 0px;
+                    }
+                    p {
+                        text-align: left;
+                    }
+                }
+                .panel-footer {
+                    height: 36px;
+                    padding: 0px;
+                    border-radius: 0px;
+                    background: $white;
+                    border: none;
+                    p {
+                        text-transform: uppercase;
+                        margin-bottom: 0px;
+                        font-family: "DIN Bold", Arial, sans-serif;
+                        color: $green;
+                        float: left;
+                        padding-left: 30px;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    span {
+                        background: $green;
+                        width: 36px;
+                        height: 36px;
+                        float: right;
+                        img {
+                            width: 20px;
+                            height: auto;
+                            display: block;
+                            margin: 5px auto;
+                        }
+                    }
+                }
+            }
+        }
+        .panel.panel-default {
+            border-radius: 0px;
+            border: none;
+            margin-bottom: 0px;
+            .panel-heading {
+                border-radius: 0px;
+                padding: 0px;
+                border: none;
+                overflow: hidden;
+                &:hover {
+                    img {
+                        -webkit-transform: scale3d(1.2, 1.2, 1);
+                        transform: scale3d(1.2, 1.2, 1);
+                        &.un-scaled {
+                            -webkit-transform: none;
+                            transform: none;
+                        }
+                    }
+                }
+                img {
+                    width: 100%;
+                    -webkit-transition: all 0.5s linear;
+                    transition: all 0.5s linear;
+                    -webkit-transform: scale3d(1, 1, 1);
+                    transform: scale3d(1, 1, 1);
+                    &.un-scaled {
+                        -webkit-transform: none;
+                        transform: none;
+                    }
+                }
+            }
+            .panel-body {
+                padding: 30px 30px 0px 30px;
+                h3 {
+                    text-align: left;
+                    text-transform: uppercase;
+                    color: $dark-grey;
+                    margin: 0px 0px 10px 0px;
+                    padding-left: 0px !important;
+                }
+            }
+            .panel-footer {
+                height: 36px;
+                padding: 0px;
+                border-radius: 0px;
+                background: $white;
+                border: none;
+                div {
+                    padding-left: 0px;
+                    p {
+                        padding-bottom: 0px;
+                        display: grid;
+                        margin-bottom: 0px;
+                        position: relative;
+                        top: -20px;
+                        text-align: left;
+                        a {
+                            text-transform: uppercase;
+                            margin-bottom: 0px;
+                            font-family: "DIN Bold", Arial, sans-serif;
+                            color: $green;
+                            float: left;
+                            padding-left: 30px;
+                            &:hover {
+                              text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                div+div {
+                    padding-right: 0px;
+                }
+                span {
+                    background: $green;
+                    width: 36px;
+                    height: 36px;
+                    float: right;
+                    img {
+                        width: 20px;
+                        height: auto;
+                        display: block;
+                        margin: 5px auto;
+                    }
+                }
+            }
+        }
+    }
+}

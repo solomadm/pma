@@ -1,0 +1,180 @@
+
+.page-heading {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    @include mediaQuery($min, $min-large-desktop) {
+        padding-left: 200px !important;
+        padding-right: 200px !important;
+    }
+    &.page-heading-less {
+        padding-bottom: 60px !important;
+    }
+    ol.breadcrumb {
+        background: transparent;
+        padding: 0px 0px 0px 15px;
+        margin-bottom: 20px;
+        li {
+            &.active {
+                color: $dark-grey;
+            }
+            a {
+                color: $dark-grey;
+                text-transform: uppercase;
+                font-family: "DIN Light", Arial, sans-serif;
+                &:hover, &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+        li+li {
+            &:before {
+                content: ">";
+                color: $dark-grey;
+            }
+        }
+    }
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "DIN Light", Arial, sans-serif;
+        font-size: 60px;
+        line-height: 60px;
+        margin: 0px 0px 10px 0px;
+        color: $dark-grey;
+        @include mediaQuery($max, $mobile) {
+            font-size: 40px;
+            line-height: 40px;
+        }
+    }
+    h3 {
+        color: $green;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: "DIN medium", Arial, sans-serif;
+        &.programme {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    .buttons {
+        width: 450px;
+        margin: 0px auto 20px auto;
+        @include mediaQuery($max, $mobile) {
+            width: 275px;
+            a {
+                width: 120px !important;
+                margin-right: 15px !important;
+            }
+            a+a {
+                margin-left: 15px !important;
+                margin-right: 0px !important;
+            }
+        }
+        a {
+            margin-top: 0px;
+            width: 200px;
+            margin-right: 22.5px;
+        }
+        a+a {
+            margin-left: 22.5px;
+            margin-right: 0px;
+        }
+    }
+    hr {
+        margin: 20px auto 20px auto;
+        width: 105px;
+        border-color: $dark-grey;
+    }
+    p {
+        text-align: center;
+        width: 50%;
+        margin: 0px auto;
+        font-size: 20px;
+        @media (min-width: 768px) and (max-width: 991px) {
+            width: 100%;
+        }
+        @include mediaQuery($max, $mobile) {
+            width: 100%;
+        }
+        &.more {
+            width: 75%;
+        }
+        sup {
+            color: $green;
+        }
+        span {
+            display: block;
+        }
+        a {
+            color: $green;
+        }
+        &.text-center {
+            font-size: 15px;
+            width: 70%;
+        }
+    }
+    p+p {
+        margin-bottom: 0px;
+    }
+    .search-box {
+        background: $light-grey;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        width: inherit !important;
+        @include mediaQuery($max, $tablet) {
+            padding-bottom: 11px;
+        }
+        .filtering-container {
+            .filtering {
+                padding-bottom: 20px;
+                padding-top: 20px;
+                p {
+                    text-transform: uppercase;
+                    color: $darker-grey;
+                    margin: 11px auto;
+                }
+                .bootstrap-select {
+                    button[type="button"] {
+                        border-radius: 0px;
+                        border: none;
+                        font-family: "DIN Regular", Arial, sans-serif;
+                        font-size: 20px;
+                        padding: 10px 65px 10px 20px;
+                        color: $dark-grey;
+                        &:not(.bs-placeholder) {
+                            color: $green;
+                            border: 1px solid $green;
+                            box-shadow: none;
+                            &:focus {
+                                box-shadow: none;
+                            }
+                        }
+                        &:hover {
+                            background: $white;
+                            outline: none !important;
+                        }
+                        &:focus {
+                            @include input-fields-keyline;
+                        }
+                        span.bs-caret {
+                            .caret {
+                                border: none;
+                                top: inherit;
+                                right: 50px;
+                                margin-top: 4px;
+                                &:before {
+                                    content: url("../img/GBF2017/common/arrow-down.png");
+                                    position: absolute;
+                                }
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        border-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

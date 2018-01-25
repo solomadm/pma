@@ -1,0 +1,346 @@
+body.form {
+    .hero-image {
+        background: url('../images/common/form-banner.jpg') no-repeat top;
+        background-size: 100% auto;
+        width: 100%;
+        height: 100%;
+        @include mediaQuery($max, $mobile) {
+            background-size: cover;
+            height: 450px;
+        }
+        @include mediaQuery($min, $min-tablet) {
+            background: none;
+            height: auto;
+        }
+        img.hero-image {
+            max-width: 100%;
+        }
+    }
+    form {
+        padding: 40px 0px;
+        display: block;
+        @include mediaQuery($max, $mobile) {
+            padding: 0px 15px;
+        }
+        &.delegate-register {
+            display: inline-block;
+            padding-left: 20px;
+            @include mediaQuery($max, $mobile) {
+                display: block;
+                .form-group {
+                    width: 75%;
+                    margin: 0px auto 25px auto;
+                }
+            }
+        }
+        &.locateDelegateForm, &.gbf-form {
+            @include mediaQuery($max, $mobile) {
+                display: block;
+                .form-group {
+                    width: 75%;
+                    margin: 0px auto 25px auto;
+                }
+            }
+        }
+        &.media-register {
+            display: inline-block;
+            padding-left: 20px;
+            @include mediaQuery($max, $mobile) {
+                display: block;
+            }
+            .organisation-section {
+                padding-top: 40px;
+            }
+            .accreditation-section {
+                padding-top: 40px;
+            }
+            @include mediaQuery($max, $mobile) {
+                .form-group {
+                    width: 75%;
+                    margin: 0px auto 25px auto;
+                }
+            }
+        }
+        h3 {
+            text-align: center;
+            text-transform: uppercase;
+            color: $green;
+            letter-spacing: 1px;
+            margin: 0px 0px 30px 0px;
+            font-weight: 400;
+            font-family: "DIN Regular", Arial, sans-serif;
+        }
+        h4 {
+            text-align: center;
+            text-transform: uppercase;
+            color: $dark-grey;
+            letter-spacing: 1px;
+            margin: 0px 0px 20px 0px;
+            font-family: "DIN Regular", Arial, sans-serif;
+        }
+        .form-group {
+            margin-bottom: 25px;
+            &.inner-link {
+                margin-bottom: 0px;
+            }
+            a {
+                &.form-link {
+                    font-family: "DIN Regular", Arial, sans-serif;
+                    color: $green;
+                    text-align: left;
+                    text-transform: capitalize;
+                    display: block;
+                    font-size: 18px;
+                }
+            }
+            label {
+                font-family: "DIN Light", Arial, sans-serif;
+                font-size: 20px;
+                &.checkbox-area {
+                    padding-left: 16px;
+                    text-indent: -16px;
+                    a {
+                        color: $darker-grey;
+                        text-decoration: underline;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                sup {
+                    color: $green;
+                }
+            }
+            input {
+                border-radius: 0px;
+                font-family: "DIN Light", Arial, sans-serif;
+                font-size: 20px;
+                border: none;
+                box-shadow: none;
+                padding-left: 20px;
+                &:focus {
+                    @include input-fields-keyline;
+                }
+                &.links {
+                    margin-bottom: 25px;
+                    font-size: 18px;
+                }
+            }
+            .fileinput {
+                @include mediaQuery($max, $mobile) {
+                    width: 100%;
+                }
+                &.article-upload {
+                    margin-bottom: 25px;
+                }
+            }
+            .bootstrap-select {
+                button[type="button"] {
+                    border-radius: 0px;
+                    border: none;
+                    font-family: "DIN Regular", Arial, sans-serif;
+                    font-size: 18px;
+                    padding-left: 20px;
+                    padding-right: 65px;
+                    &:hover {
+                        background: $white;
+                        outline: none !important;
+                    }
+                    &:focus {
+                        @include input-fields-keyline;
+                    }
+                    span.bs-caret {
+                        .caret {
+                            border: none;
+                            top: inherit;
+                            right: 50px;
+                            margin-top: 4px;
+                            &:before {
+                                content: url("../img/GBF2017/common/arrow-down.png");
+                                position: absolute;
+                            }
+                        }
+                    }
+                }
+                .dropdown-menu {
+                    border-radius: 0px;
+                }
+            }
+            .fileinput.input-group {
+                .form-control {
+                    border-radius: 0px;
+                    border: none;
+                    &:focus {
+                        @include input-fields-keyline;
+                    }
+                }
+                span.btn.btn-default {
+                    border: none;
+                    height: 34px;
+                    background: $green;
+                    color: $white;
+                    text-transform: uppercase;
+                    border-radius: 0px;
+                    font-family: "DIN Bold", Arial, sans-serif;
+                    &:hover, &:focus {
+                        border: 1px solid $green;
+                        color: $green;
+                        background: $white;
+                        outline: none;
+                    }
+                }
+                a.btn.btn-default {
+                    padding: 6px 12px;
+                    height: 34px;
+                    font-size: 14px;
+                }
+            }
+            textarea {
+                border-radius: 0px;
+                font-family: "DIN Regular", Arial, sans-serif;
+                font-size: 18px;
+                padding-left: 20px;
+                border: none;
+                &:focus {
+                    @include input-fields-keyline;
+                }
+            }
+            p {
+                font-family: "DIN Bold", Arial, sans-serif;
+                margin-bottom: 0px;
+                text-transform: uppercase;
+                font-size: 18px;
+            }
+            small {
+                font-family: "DIN Regular", Arial, sans-serif;
+                font-size: 15px;
+                color: $dark-grey;
+                display: block;
+                margin-top: 20px;
+                a {
+                    text-decoration: underline;
+                    color: $dark-grey;
+                }
+            }
+            button[type="submit"] {
+                @include buttons;
+                width: 237px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+.icheckbox_square-blue,
+.iradio_square-blue {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url("http://icheck.fronteed.com/skins/square/blue.png") no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-blue {
+    background-position: 0 0;
+}
+
+.icheckbox_square-blue.hover {
+    background-position: -24px 0;
+}
+
+.icheckbox_square-blue.checked {
+    background-position: -48px 0;
+}
+
+.icheckbox_square-blue.disabled {
+    background-position: -72px 0;
+    cursor: default;
+}
+
+.icheckbox_square-blue.checked.disabled {
+    background-position: -96px 0;
+}
+
+.iradio_square-blue {
+    background-position: -120px 0;
+}
+
+.iradio_square-blue.hover {
+    background-position: -144px 0;
+}
+
+.iradio_square-blue.checked {
+    background-position: -168px 0;
+}
+
+.iradio_square-blue.disabled {
+    background-position: -192px 0;
+    cursor: default;
+}
+
+.iradio_square-blue.checked.disabled {
+    background-position: -216px 0;
+}
+
+/* aero */
+.icheckbox_square-aero,
+.iradio_square-aero {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url("../../images/icheck/aero.png") no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-aero {
+    background-position: 0 0;
+}
+
+.icheckbox_square-aero.hover {
+    background-position: -24px 0;
+}
+
+.icheckbox_square-aero.checked {
+    background-position: -48px 0;
+}
+
+.icheckbox_square-aero.disabled {
+    background-position: -72px 0;
+    cursor: default;
+}
+
+.icheckbox_square-aero.checked.disabled {
+    background-position: -96px 0;
+}
+
+.iradio_square-aero {
+    background-position: -120px 0;
+}
+
+.iradio_square-aero.hover {
+    background-position: -144px 0;
+}
+
+.iradio_square-aero.checked {
+    background-position: -168px 0;
+}
+
+.iradio_square-aero.disabled {
+    background-position: -192px 0;
+    cursor: default;
+}
+
+.iradio_square-aero.checked.disabled {
+    background-position: -216px 0;
+}
+

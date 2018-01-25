@@ -1,0 +1,43 @@
+@mixin buttons {
+    border: 1px solid $green;
+    background: $green;
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 0px;
+    font-family: "DIN Bold", Arial, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 12px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    height: 52px;
+    &:hover, &:focus {
+        color: $green;
+        background: $white;
+        outline: none;
+    }
+}
+
+@mixin input-fields-keyline {
+    background: $white;
+    outline: none !important;
+    -moz-box-shadow: inset 0px 0px 0px 1px $mid-grey;
+    -webkit-box-shadow: inset 0px 0px 0px 1px $mid-grey;
+    box-shadow: inset 0px 0px 0px 1px $mid-grey;
+}
+
+@mixin transition($transition-time, $method) {
+    -webkit-transition: $transition-time $method;
+    -moz-transition: $transition-time $method;
+    -ms-transition: $transition-time $method;
+    -o-transition: $transition-time $method;
+    transition: $transition-time $method;
+}
+
+@mixin all-transition($transition-time, $element, $method) {
+    -webkit-transition: $transition-time $element $method;
+    -moz-transition: $transition-time $element $method;
+    -ms-transition: $transition-time $element $method;
+    -o-transition: $transition-time $element $method;
+    transition: $transition-time $element $method;
+}
